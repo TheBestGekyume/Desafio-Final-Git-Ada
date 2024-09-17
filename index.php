@@ -10,7 +10,6 @@
 
 <body>
 
-
     <main>
         <h1>CALCULADORA</h1>
 
@@ -28,6 +27,14 @@
                     <option value="-">-</option>
                     <option value="*">*</option>
                     <option value="/">/</option>
+                    <option value="sqrt">Raiz Quadrada</option>
+                    <option value="**">Potencia</option>
+                    <option value="inverterSinal">Inverter Sinal</option>
+                    <option value="inverterNumero">Inverter Numero</option>
+                    <option value="seno">Seno</option>
+                    <option value="cosseno">Cosseno</option>
+                    <option value="tangente">Tangente</option>
+                    <option value="!">Fatorial</option>
                 </select>
             </div>
 
@@ -45,7 +52,6 @@
 
     </main>
 
-    
 
 </body>
 
