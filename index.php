@@ -101,7 +101,78 @@
         </form>
 
     </main>
+    
+    <?php
+    if (isset($_GET["n1"]) && isset($_GET["n2"]) && isset($_GET["op"])) {
+        $n1 = $_GET["n1"];
+        $n2 = $_GET["n2"];
+        $op = $_GET["op"];
+        $result = 0;
 
+        switch ($op) {
+            case '+':
+                $result = $n1 + $n2;
+                break;
+            case '-':
+                $result = $n1 - $n2;
+                break;
+            case '*':
+                $result = $n1 * $n2;
+                break;
+            case '/':
+                if ($n2 != 0) {
+                    $result = $n1 / $n2;
+                } else {
+                    $result = "Divisão por zero não permitida!";
+                }
+                break;
+
+            case '**':
+                $result = $n1 ** $n2;
+                break;
+
+            case 'sqrt':
+                $result = sqrt($n1);
+                break;
+
+            case 'inverterSinal':
+                $result = $n1 * -1;
+                break;
+
+            case 'inverterNumero':
+                $result = 1 / $n1;
+                break;
+
+            case 'seno':
+                $result = sin($n1);
+                break;
+
+            case 'cosseno':
+                $result = cos($n1);
+                break;
+
+            case 'tangente':
+                $result = tan($n1);
+                break;
+
+            case '!':
+                $result = 1;
+
+                for ($i = $n1; $i >= 1; $i--) {
+                    $result *= $i;
+                }
+
+                break;
+
+            default:
+                $result = "Operação inválida";
+                break;
+        }
+
+        echo "<h2>Resultado: $result</h2>";
+    }
+
+    ?>
 
 </body>
 
